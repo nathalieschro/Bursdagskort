@@ -32,6 +32,7 @@ namespace HemmeligProsjekt
                 GivePrize(IO.InputNumber());
             }
 
+            //Game end screen
             IO.BirthdaySong();
             IO.PrintBirthdayCake();
 
