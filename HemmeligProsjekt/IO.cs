@@ -62,7 +62,7 @@ namespace HemmeligProsjekt
         public static bool InputYesOrNo()
         {
             Console.WriteLine("\n");
-            Typewriter.Text("Skriv inn [j] for JA og [n] for NEI");
+            Typewriter.Text("Skriv inn [j] for JA eller [n] for NEI");
             Console.WriteLine("\n");
             char input = Console.ReadKey(intercept: true).KeyChar;
             
@@ -77,7 +77,7 @@ namespace HemmeligProsjekt
         public static void PrintAskToSelectGift()
         {
             Console.WriteLine("\n");
-            Typewriter.Text("Hvilken gave vil du ha?");
+            Typewriter.Text("Hvilken premie vil du ha?");
             Console.WriteLine("\n");
         }
 
@@ -111,6 +111,12 @@ namespace HemmeligProsjekt
             Console.WriteLine(@"  \/_______/");
             Console.WriteLine("\n");
             Typewriter.Text(@"Terning triller");
+            Thread.Sleep(500);
+            Console.Write(".");
+            Thread.Sleep(500);
+            Console.Write(".");
+            Thread.Sleep(500);
+            Console.Write(".");
             Console.WriteLine("\n");
             Thread.Sleep(1000);
 
@@ -126,6 +132,8 @@ namespace HemmeligProsjekt
             Console.WriteLine("\n");
             Thread.Sleep(1000);
             Typewriter.Text("Terningen trillet 0...");
+            Console.WriteLine("\n");
+            Typewriter.Text("Ingen premie vunnet");
             Thread.Sleep(4000);
             Console.Clear();
 
@@ -202,10 +210,12 @@ namespace HemmeligProsjekt
         {
             Thread.Sleep(1000);
             Console.Clear();
-            Typewriter.Text("Men spillet er ikke ferdig...");
+            Typewriter.Text("Fordi spillet er ikke ferdig helt enda...");
+            Console.WriteLine("\n");
+            Typewriter.Text("Siden du har bursdag i dag får du en siste sjanse");
             Console.WriteLine("\n");
             Thread.Sleep(900);
-            Typewriter.Text("Du kan velge én av premiene fra første runde");
+            Typewriter.Text("Du kan nå velge én av premiene fra første runde");
             Console.WriteLine("\n");
             Thread.Sleep(1000);
             PrintGifts();
