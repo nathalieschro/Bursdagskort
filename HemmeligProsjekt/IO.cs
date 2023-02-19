@@ -30,7 +30,6 @@ namespace HemmeligProsjekt
             }
         }
 
-
         public static void PrintWelcomeMessagePart1()
         {
             Console.Beep();
@@ -80,38 +79,11 @@ namespace HemmeligProsjekt
             return false;
         }
 
-        public static void PrintUnknownError()
+        public static void PrintTomasTriesToAvoidToPlay()
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Beep boop, unknown error, prøv igjen");
-            Console.ResetColor();
-        }
-
-        public static void PrintExcuseForNotGivingGift(int number)
-        {
-            switch (number)
-            {
-                case 1:
-                    Console.WriteLine("\nÅnei, Hans kjøpte visst den siste tilgjengelige billetten. Prøv igjen.");
-                    break;
-                case 2:
-                    Console.WriteLine("\nCharlie hadde ikke tid til å møte deg. Prøv igjen");
-                    break;
-                case 3:
-                    Console.WriteLine("\nEhhh...Her var vi litt optimiske. Uhm. UTSOLGT sier Kristian. Prøv igjen");
-                    break;
-                case 4:
-                    Console.WriteLine("\nDu vil vel ikke ha ferie? Prøv igjen");
-                    break;
-                case 5:
-                    Console.WriteLine("\nFor fint vær i Bahamas i disse dager. Prøv igjen.");
-                    break;
-            }
-        }
-
-        public static void PrintWonFruitBasket()
-        {
-            Console.WriteLine("\nDu vant en fruktkurv. Hurra!");
+            Console.WriteLine("Nei! Du må rulle terningen!\n");
+            Thread.Sleep(900);
+            Console.WriteLine("Når du skal være så vanskelig, ruller vi den for deg.");
         }
 
         public static void PrintRollDice()
@@ -202,24 +174,12 @@ namespace HemmeligProsjekt
             Console.Clear();
         }
 
-        public static void PrintTomasTriesToAvoidToPlay()
-        {
-            Console.WriteLine("Nei! Du må rulle terningen!\n");
-            Thread.Sleep(900);
-            Console.WriteLine("Når du skal være så vanskelig, ruller vi den for deg.");
-        }
-
         public static void PrintConsolationPrize()
         {
             Console.WriteLine("Som takk for deltagelse får du en trøstepremie\n");
             Thread.Sleep(1100);
             Console.WriteLine("Du får den utlevert etter at spillet er ferdig\n");
             Thread.Sleep(3200);
-        }
-
-        public static void PrintPrizeWonText()
-        {
-            Console.WriteLine("Gratulere, du er den eneste deltakeren som noensinne har valgt fruktkurven!\n");
         }
 
         public static void PrintWelcomeMessagePart2()
@@ -232,6 +192,43 @@ namespace HemmeligProsjekt
             Thread.Sleep(1000);
             PrintGifts();
         }
+
+        public static void PrintUnknownError()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Beep boop, unknown error, prøv igjen");
+            Console.ResetColor();
+        }
+
+        public static void PrintExcuseForNotGivingGift(int number)
+        {
+            switch (number)
+            {
+                case 1:
+                    Console.WriteLine("\nÅnei, Hans kjøpte visst den siste tilgjengelige billetten. Prøv igjen.");
+                    break;
+                case 2:
+                    Console.WriteLine("\nCharlie hadde ikke tid til å møte deg. Prøv igjen");
+                    break;
+                case 3:
+                    Console.WriteLine("\nEhhh...Her var vi litt optimiske. Uhm. UTSOLGT sier Kristian. Prøv igjen");
+                    break;
+                case 4:
+                    Console.WriteLine("\nDu vil vel ikke ha ferie? Prøv igjen");
+                    break;
+                case 5:
+                    Console.WriteLine("\nFor fint vær i Bahamas i disse dager. Prøv igjen.");
+                    break;
+            }
+        }
+
+        public static void PrintWonFruitBasket()
+        {
+            Console.WriteLine("\nDu vant en fruktkurv!\n");
+            Console.WriteLine("Gratulerer, du er den eneste deltakeren som noensinne har valgt fruktkurven!\n");
+
+        }
+
         public static void BirthdaySong()
         {
             Thread.Sleep(2000);
