@@ -84,6 +84,7 @@ namespace HemmeligProsjekt
             Console.WriteLine("Nei! Du må rulle terningen!\n");
             Thread.Sleep(900);
             Console.WriteLine("Når du skal være så vanskelig, ruller vi den for deg.");
+            Thread.Sleep(2000);
         }
 
         public static void PrintRollDice()
@@ -231,7 +232,6 @@ namespace HemmeligProsjekt
 
         public static void BirthdaySong()
         {
-            //Thread.Sleep(2000);
             Console.Beep(264, 125);
             Thread.Sleep(250);
             Console.Beep(264, 125);
