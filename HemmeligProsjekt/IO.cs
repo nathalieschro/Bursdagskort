@@ -231,7 +231,7 @@ namespace HemmeligProsjekt
 
         public static void BirthdaySong()
         {
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
             Console.Beep(264, 125);
             Thread.Sleep(250);
             Console.Beep(264, 125);
@@ -288,8 +288,6 @@ namespace HemmeligProsjekt
         public static void PrintBirthdayCake()
         {
             Console.Clear();
-            Console.BackgroundColor= ConsoleColor.White;
-            Console.ForegroundColor= ConsoleColor.DarkMagenta;
             Console.WriteLine(@"                0   0                ");
             Console.WriteLine(@"                |   |                ");
             Console.WriteLine(@"            ____|___|____            ");
