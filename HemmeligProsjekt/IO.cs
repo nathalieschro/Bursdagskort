@@ -56,23 +56,14 @@ namespace HemmeligProsjekt
 
         public static void PrintAskToRoll()
         {
-            Console.WriteLine("\nVil du rrrrruuuuulllleeee terningen?");
+            Console.WriteLine("\n");
+            Typewriter.Text("Vil du rrrrruuuuulllleeee terningen?");
         }
-
-        public static void PrintAskToSelectGift()
-        {
-            Console.WriteLine("\nHvilken gave vil du ha?");
-        }
-
-        public static int InputNumber ()
-        {
-            int number = int.Parse(Console.ReadLine());
-            return number;
-        }
-
         public static bool InputYesOrNo()
         {
-            Console.WriteLine("\nSkriv inn [j] for JA og [n] for NEIN");
+            Console.WriteLine("\n");
+            Typewriter.Text("Skriv inn [j] for JA og [n] for NEI");
+            Console.WriteLine("\n");
             char input = Console.ReadKey(intercept: true).KeyChar;
             
             if (input == 'j')
@@ -83,11 +74,27 @@ namespace HemmeligProsjekt
             return false;
         }
 
+        public static void PrintAskToSelectGift()
+        {
+            Console.WriteLine("\n");
+            Typewriter.Text("Hvilken gave vil du ha?");
+            Console.WriteLine("\n");
+        }
+
+        public static int InputNumber ()
+        {
+            int number = int.Parse(Console.ReadLine());
+            return number;
+        }
+
+
         public static void PrintTomasTriesToAvoidToPlay()
         {
-            Console.WriteLine("Nei! Du må rulle terningen!\n");
+            Console.WriteLine("\n");
+            Typewriter.Text("Nei! Du må rulle terningen!");
+            Console.WriteLine("\n");
             Thread.Sleep(900);
-            Console.WriteLine("Når du skal være så vanskelig, ruller vi den for deg.");
+            Typewriter.Text("Når du skal være så vanskelig, ruller vi den for deg.");
             Thread.Sleep(2000);
         }
 
@@ -102,7 +109,9 @@ namespace HemmeligProsjekt
             Console.WriteLine(@"\ *  /       /");
             Console.WriteLine(@" \  /  * *  /");
             Console.WriteLine(@"  \/_______/");
-            Console.WriteLine(@"Terning triller");
+            Console.WriteLine("\n");
+            Typewriter.Text(@"Terning triller");
+            Console.WriteLine("\n");
             Thread.Sleep(1000);
 
             Console.WriteLine(@"   ________");
@@ -112,10 +121,11 @@ namespace HemmeligProsjekt
             Console.WriteLine(@"\ () /       /");
             Console.WriteLine(@" \  /   ()  /");
             Console.WriteLine(@"  \/_______/");
-
-            Console.WriteLine("Terning rullet!");
+            Console.WriteLine("\n");
+            Typewriter.Text("Terning rullet!");
+            Console.WriteLine("\n");
             Thread.Sleep(1000);
-            Console.WriteLine("Terningen trillet 0...");
+            Typewriter.Text("Terningen trillet 0...");
             Thread.Sleep(4000);
             Console.Clear();
 
@@ -181,9 +191,10 @@ namespace HemmeligProsjekt
 
         public static void PrintConsolationPrize()
         {
-            Console.WriteLine("Som takk for deltagelse får du en trøstepremie\n");
+            Typewriter.Text("Som takk for deltagelse får du en trøstepremie");
+            Console.WriteLine("\n");
             Thread.Sleep(1100);
-            Console.WriteLine("Du får den utlevert etter at spillet er ferdig\n");
+            Typewriter.Text("Du får den utlevert etter at spillet er ferdig");
             Thread.Sleep(3200);
         }
 
@@ -191,9 +202,11 @@ namespace HemmeligProsjekt
         {
             Thread.Sleep(1000);
             Console.Clear();
-            Console.WriteLine("Men spillet er ikke ferdig...\n");
+            Typewriter.Text("Men spillet er ikke ferdig...");
+            Console.WriteLine("\n");
             Thread.Sleep(900);
-            Console.WriteLine("Du kan velge én av premiene fra første runde\n");
+            Typewriter.Text("Du kan velge én av premiene fra første runde");
+            Console.WriteLine("\n");
             Thread.Sleep(1000);
             PrintGifts();
         }
@@ -201,7 +214,7 @@ namespace HemmeligProsjekt
         public static void PrintUnknownError()
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Beep boop, unknown error, prøv igjen");
+            Typewriter.Text("Beep boop, unknown error, prøv igjen");
             Console.ResetColor();
         }
 
@@ -210,27 +223,34 @@ namespace HemmeligProsjekt
             switch (number)
             {
                 case 1:
-                    Console.WriteLine("\nÅnei, Hans kjøpte visst den siste tilgjengelige billetten. Prøv igjen.");
+                    Console.WriteLine("\n");
+                    Typewriter.Text("Ånei, Hans kjøpte visst den siste tilgjengelige billetten. Prøv igjen.");
                     break;
                 case 2:
-                    Console.WriteLine("\nCharlie hadde ikke tid til å møte deg. Prøv igjen");
+                    Console.WriteLine("\n");
+                    Typewriter.Text("Charlie hadde ikke tid til å møte deg. Prøv igjen");
                     break;
                 case 3:
-                    Console.WriteLine("\nEhhh...Her var vi litt optimiske. Uhm. UTSOLGT sier Kristian. Prøv igjen");
+                    Console.WriteLine("\n");
+                    Typewriter.Text("Ehhh...Her var vi litt optimiske. Uhm. UTSOLGT sier Kristian. Prøv igjen");
                     break;
                 case 4:
-                    Console.WriteLine("\nDu vil vel ikke ha ferie? Prøv igjen");
+                    Console.WriteLine("\n");
+                    Typewriter.Text("Du vil vel ikke ha ferie? Prøv igjen");
                     break;
                 case 5:
-                    Console.WriteLine("\nFor fint vær i Bahamas i disse dager. Prøv igjen.");
+                    Console.WriteLine("\n");
+                    Typewriter.Text("For fint vær i Bahamas i disse dager. Prøv igjen.");
                     break;
             }
         }
 
         public static void PrintWonFruitBasket()
         {
-            Console.WriteLine("\nDu vant en fruktkurv!\n");
-            Console.WriteLine("Gratulerer, du er den eneste deltakeren som noensinne har valgt fruktkurven!\n");
+            Console.WriteLine("\n");
+            Typewriter.Text("Du vant en fruktkurv!");
+            Console.WriteLine("\n");
+            Typewriter.Text("Gratulerer, du er den eneste deltakeren som noensinne har valgt fruktkurven!");
 
         }
 
