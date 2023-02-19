@@ -26,7 +26,7 @@ namespace HemmeligProsjekt
             foreach (string gift in Gifts)
             {
                 Console.WriteLine(gift);
-                Thread.Sleep(900);
+                Thread.Sleep(500);
             }
         }
 
@@ -35,23 +35,23 @@ namespace HemmeligProsjekt
             Console.Beep();
             Typewriter.Text("Chief RubberDuck");
             Console.WriteLine("\n");
-            Thread.Sleep(1100);
+            Thread.Sleep(500);
             Typewriter.Text("Du har bursdag i dag");
             Console.WriteLine("\n");
-            Thread.Sleep(1100);
+            Thread.Sleep(500);
             Typewriter.Text("Velkommen til");
             Console.WriteLine("\n"); 
-            Thread.Sleep(1100);
+            Thread.Sleep(1000);
             Console.ForegroundColor= ConsoleColor.Magenta;
             Typewriter.Text("ROLL-A-DICE-AND-WIN-A-BIRTHDAY-GIFT");
             Console.WriteLine("\n");
             Console.ResetColor();
-            Thread.Sleep(1100);
+            Thread.Sleep(500);
             Console.ForegroundColor = ConsoleColor.Green;
             Typewriter.Text("I dette spillet får du muligheten til å vinne en gave");
             Console.WriteLine("\n");
             Console.ResetColor();
-            Thread.Sleep(900);
+            Thread.Sleep(500);
         }
 
         public static void PrintAskToRoll()
