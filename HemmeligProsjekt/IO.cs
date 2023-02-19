@@ -326,29 +326,71 @@ namespace HemmeligProsjekt
 
         public static void PrintBirthdayCake()
         {
+            string[] cake = new[] {
+                @"                0   0                ",
+                @"                |   |                ",
+                @"            ____|___|____            ",
+                @"         0  |~ ~ ~ ~ ~ ~|   0        ",
+                @"         |  |           |   |        ",
+                @"      ___|__|___________|___|__      ",
+                @"      |/\/\/\/\/\/\/\/\/\/\/\/|      ",
+                @"  0   |         TOMAS         |   0  ",
+                @"  |   |/\/\/\/\/\/\/\/\/\/\/\/|   |  ",
+                @" _|___|_______________________|___|__",
+                @"|/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|",
+                @"|                                   |",
+                @"|        GRATULERER MED DAGEN       |",
+                @"| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |",
+                @"|___________________________________|"
+            };
+
+            int startX = (Console.WindowWidth - cake[0].Length) / 2;
+            int startY = (Console.WindowHeight - cake.Length) / 2;
+            //string[] colors = new[] { "Yellow", "DarkYellow", "Magenta", "DarkMagenta","Cyan", "DarkCyan" };
+            int i = 0;
+
             Console.Clear();
-            Console.WriteLine(@"                0   0                ");
-            Console.WriteLine(@"                |   |                ");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(@"            ____|___|____            ");
-            Console.WriteLine(@"         0  |~ ~ ~ ~ ~ ~|   0        ");
-            Console.WriteLine(@"         |  |           |   |        ");
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine(@"      ___|__|___________|___|__      ");
-            Console.WriteLine(@"      |/\/\/\/\/\/\/\/\/\/\/\/|      ");
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine(@"  0   |         TOMAS         |   0  ");
-            Console.WriteLine(@"  |   |/\/\/\/\/\/\/\/\/\/\/\/|   |  ");
-            Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine(@" _|___|_______________________|___|__");
-            Console.WriteLine(@"|/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine(@"|                                   |");
-            Console.WriteLine(@"|        GRATULERER MED DAGEN       |");
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine(@"| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |");
-            Console.WriteLine(@"|___________________________________|");
-            Console.ResetColor();
+
+            foreach (string item in cake)
+            {
+                // TODO: iterate through the colors-array to get colors, instead of hardcoding, like this
+                if (i == 2) Console.ForegroundColor = ConsoleColor.Yellow;
+                if (i == 5) Console.ForegroundColor = ConsoleColor.DarkYellow;
+                if (i == 7) Console.ForegroundColor = ConsoleColor.Magenta;
+                if (i == 9) Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                if (i == 11) Console.ForegroundColor = ConsoleColor.Cyan;
+                if (i == 13) Console.ForegroundColor = ConsoleColor.DarkCyan;
+
+                Console.SetCursorPosition(startX, startY + i);
+                Console.WriteLine(item);
+                i++;
+            }
+            // "obfuscate" the default console end-of-program-text and hide the cursor.
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.CursorVisible = false;
+            //Console.Clear();
+            //Console.WriteLine(@"                0   0                ");
+            //Console.WriteLine(@"                |   |                ");
+            //Console.ForegroundColor = ConsoleColor.Yellow;
+            //Console.WriteLine(@"            ____|___|____            ");
+            //Console.WriteLine(@"         0  |~ ~ ~ ~ ~ ~|   0        ");
+            //Console.WriteLine(@"         |  |           |   |        ");
+            //Console.ForegroundColor = ConsoleColor.DarkYellow;
+            //Console.WriteLine(@"      ___|__|___________|___|__      ");
+            //Console.WriteLine(@"      |/\/\/\/\/\/\/\/\/\/\/\/|      ");
+            //Console.ForegroundColor = ConsoleColor.Magenta;
+            //Console.WriteLine(@"  0   |         TOMAS         |   0  ");
+            //Console.WriteLine(@"  |   |/\/\/\/\/\/\/\/\/\/\/\/|   |  ");
+            //Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            //Console.WriteLine(@" _|___|_______________________|___|__");
+            //Console.WriteLine(@"|/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|");
+            //Console.ForegroundColor = ConsoleColor.Cyan;
+            //Console.WriteLine(@"|                                   |");
+            //Console.WriteLine(@"|        GRATULERER MED DAGEN       |");
+            //Console.ForegroundColor = ConsoleColor.DarkCyan;
+            //Console.WriteLine(@"| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |");
+            //Console.WriteLine(@"|___________________________________|");
+            //Console.ResetColor();
         }
     }
 }

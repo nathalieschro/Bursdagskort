@@ -10,9 +10,7 @@ namespace HemmeligProsjekt
     internal class Utils
     {
         // START: For manipulating size of console window. Put this in the top of a class in your project, or in top of Program class.
-        // USAGE IN MAIN:    
-        //                  ShowWindow(MAXIMIZE);
-
+        // USAGE IN MAIN:   Utils.ShowWindow(MAXIMIZE);            
         [DllImport("kernel32.dll", ExactSpelling = true)]
         private static extern IntPtr GetConsoleWindow();
         private static IntPtr ThisCon = GetConsoleWindow();
@@ -31,6 +29,8 @@ namespace HemmeligProsjekt
             ShowWindow(ThisCon, nCmdShow);
         }
         // END
+
+
 
     }
 }
