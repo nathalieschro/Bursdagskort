@@ -284,5 +284,25 @@ namespace HemmeligProsjekt
             Thread.Sleep(125);
             Console.Beep(352, 1000);
         }
+
+        public static void PrintBirthdayCake()
+        {
+            Console.Clear();
+            Console.WriteLine(@"                0   0");
+            Console.WriteLine(@"                |   |");
+            Console.WriteLine(@"            ____|___|____");
+            Console.WriteLine(@"         0  |~ ~ ~ ~ ~ ~|   0");
+            Console.WriteLine(@"         |  |           |   |");
+            Console.WriteLine(@"      ___|__|___________|___|__");
+            Console.WriteLine(@"      |/\/\/\/\/\/\/\/\/\/\/\/|");
+            Console.WriteLine(@"  0   |         TOMAS         |   0");
+            Console.WriteLine(@"  |   |/\/\/\/\/\/\/\/\/\/\/\/|   |");
+            Console.WriteLine(@" _|___|_______________________|___|__");
+            Console.WriteLine(@"|/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|");
+            Console.WriteLine(@"|                                   |");
+            Console.WriteLine(@"|        GRATULERER MED DAGEN       |");
+            Console.WriteLine(@"| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |");
+            Console.WriteLine(@"|___________________________________|");
+        }
     }
 }

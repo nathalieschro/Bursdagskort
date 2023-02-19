@@ -33,6 +33,7 @@ namespace HemmeligProsjekt
             }
 
             IO.BirthdaySong();
+            IO.PrintBirthdayCake();
 
         }
         public void CheckTomasAnswer(bool tomasAnswer)
