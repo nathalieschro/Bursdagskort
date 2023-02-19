@@ -33,19 +33,23 @@ namespace HemmeligProsjekt
         public static void PrintWelcomeMessagePart1()
         {
             Console.Beep();
-            Console.WriteLine("Chief RubberDuck\n");
+            Typewriter.Text("Chief RubberDuck");
+            Console.WriteLine("\n");
             Thread.Sleep(1100);
-            Console.WriteLine("Du har bursdag i dag\n");
+            Typewriter.Text("Du har bursdag i dag");
+            Console.WriteLine("\n");
             Thread.Sleep(1100);
-            Console.WriteLine("Velkommen til"); 
+            Typewriter.Text("Velkommen til");
+            Console.WriteLine("\n"); 
             Thread.Sleep(1100);
             Console.ForegroundColor= ConsoleColor.Magenta;
-            Console.WriteLine("ROLL-A-DICE-AND-WIN-A-BIRTHDAY-GIFT\n");
-            Console.Beep();
+            Typewriter.Text("ROLL-A-DICE-AND-WIN-A-BIRTHDAY-GIFT");
+            Console.WriteLine("\n");
             Console.ResetColor();
             Thread.Sleep(1100);
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("I dette spillet får du muligheten til å vinne en gave\n");
+            Typewriter.Text("I dette spillet får du muligheten til å vinne en gave");
+            Console.WriteLine("\n");
             Console.ResetColor();
             Thread.Sleep(900);
         }
