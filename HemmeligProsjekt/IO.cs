@@ -137,6 +137,8 @@ namespace HemmeligProsjekt
             Thread.Sleep(4000);
             Console.Clear();
 
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(@"        .--'''''''''--.");
             Console.WriteLine(@"     .'      .---.      '.");
             Thread.Sleep(100);
@@ -162,16 +164,18 @@ namespace HemmeligProsjekt
             Console.WriteLine(@"              | |");
             Thread.Sleep(100);
             Console.WriteLine(@"             _| |_");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(@"            /\( )/\");
             Thread.Sleep(100);
             Console.WriteLine(@"           /  ` '  \");
             Console.WriteLine(@"          | |     | |");
-            Thread.Sleep(100);
+            Thread.Sleep(100);            
             Console.WriteLine(@"          '-'     '-'");
             Console.WriteLine(@"          | |     | |");
             Thread.Sleep(100);
             Console.WriteLine(@"          | |     | |");
             Console.WriteLine(@"          | |-----| |");
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Thread.Sleep(100);
             Console.WriteLine(@"       .`/  |     | |/`.");
             Console.WriteLine(@"       |    |     |    |");
@@ -194,6 +198,7 @@ namespace HemmeligProsjekt
             Console.WriteLine(@"     /o  o\ .'   `. /o  o\");
             Console.WriteLine(@"     `.___.'       `.___.'");
             Thread.Sleep(2000);
+            Console.ResetColor();
             Console.Clear();
         }
 
