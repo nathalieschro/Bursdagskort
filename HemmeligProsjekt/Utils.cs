@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace HemmeligProsjekt
 {
-    internal class Utils
+    public class Utils
     {
         // START: For manipulating size of console window. Put this in the top of a class in your project, or in top of Program class.
         // USAGE IN MAIN:   Utils.ShowWindow(MAXIMIZE);            
