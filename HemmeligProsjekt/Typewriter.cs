@@ -8,12 +8,12 @@ namespace HemmeligProsjekt
 {
     public class Typewriter
     {
-        public static void Text(string text)
+        public static void Text(string text, int delay = 40)
         {
             for (int i = 0; i < text.Length; i++)
             {
                 Console.Write(text[i]);
-                Thread.Sleep(40);
+                Thread.Sleep(delay);
             }
         }
     }
