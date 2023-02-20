@@ -239,6 +239,7 @@ namespace HemmeligProsjekt
             Thread.Sleep(4000);
             //Console.Clear();
 
+
             string[] squidwardTentacles = new[]
             {
             @"        .--'''''''''--.",
