@@ -33,7 +33,14 @@ namespace HemmeligProsjekt
         public static void PrintWelcomeMessagePart1()
         {
             Console.Beep();
-            Typewriter.Text("Chief RubberDuck");
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Typewriter.Text("Chief");
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Thread.Sleep(500);
+            Typewriter.Text("RubberDuck",100);
+            Console.ResetColor();
             Console.WriteLine("\n");
             Thread.Sleep(500);
             Typewriter.Text("Du har bursdag i dag");
@@ -42,7 +49,7 @@ namespace HemmeligProsjekt
             Typewriter.Text("Velkommen til");
             Console.WriteLine("\n"); 
             Thread.Sleep(1000);
-            Console.ForegroundColor= ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.Magenta;
             Typewriter.Text("ROLL-A-DICE-AND-WIN-A-BIRTHDAY-GIFT");
             Console.WriteLine("\n");
             Console.ResetColor();
@@ -101,24 +108,119 @@ namespace HemmeligProsjekt
         public static void PrintRollDice()
         {
             Thread.Sleep(900);
+
+            string[] dieFrames = new[]
+            {
+                @$"   ________  
+  /\  *  * \  
+ /  \   *   \  
+/    \_______\  
+\ *  /       /  
+ \  /  * *  /  
+  \/_______/  
+                ",
+                @$"    ________  
+   /\       \  
+  /  \   *   \  
+ /  * \_______\  
+ \ *  /       /  
+  \  /  ***  /  
+   \/_______/  
+                ",
+                @$"   ________  
+  /\  *  * \  
+ /  \  *  * \  
+/ *  \_______\  
+\ * */       /  
+ \  /   *   /  
+  \/_______/  
+                ",
+                @$"    ________  
+   /\       \  
+  /  \   *   \  
+ /    \_______\  
+ \ *  / * * * /  
+  \  /   *   /  
+   \/_______/  
+                ",
+                @$"   ________  
+  /\  *    \  
+ /  \ * *   \  
+/    \_______\  
+\ *  / * * * /  
+ \  / *   * /  
+  \/_______/  
+                ",
+                @$"   ________  
+  /\       \  
+ /  \  *  * \  
+/ *  \_______\  
+\ * */ * * * /  
+ \  /   *   /  
+  \/_______/  
+                ",
+                @$"    ________  
+   /\ *     \  
+  /  \ *   * \  
+ /    \_______\  
+ \ *  / * * * /  
+  \  / *   * /  
+   \/_______/  
+                ",
+                @$"    ________  
+   /\ *     \  
+  /  \ *   * \  
+ / *  \_______\  
+ \ * */ * * * /  
+  \  / *   * /  
+   \/_______/  
+                ",
+                @$"   ________  
+  /\ *     \  
+ /  \ *   * \  
+/ *  \_______\  
+\ * */  * *  /  
+ \  / *   * /  
+  \/_______/  
+                "
+};
             Console.Clear();
-            Console.WriteLine(@"   ________");
-            Console.WriteLine(@"  /\  *  * \");
-            Console.WriteLine(@" /  \   *   \");
-            Console.WriteLine(@"/    \_______\");
-            Console.WriteLine(@"\ *  /       /");
-            Console.WriteLine(@" \  /  * *  /");
-            Console.WriteLine(@"  \/_______/");
-            Console.WriteLine("\n");
-            Typewriter.Text(@"Terning triller");
-            Thread.Sleep(500);
-            Console.Write(".");
-            Thread.Sleep(500);
-            Console.Write(".");
-            Thread.Sleep(500);
-            Console.Write(".");
-            Console.WriteLine("\n");
-            Thread.Sleep(1000);
+            Console.CursorVisible = false;
+            int i = 0;
+            while (!Console.KeyAvailable)
+            {
+                Console.SetCursorPosition(0, 0);
+                Console.Write(dieFrames[i]);
+                i = (i + 1) % dieFrames.Length;
+                System.Threading.Thread.Sleep(100); // Pause for a short period to slow down the animation
+
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"\n    ___\r\n   //_\\\\_\r\n .\"\\\\    \".\r\n/          \\\r\n|           \\_\r\n|       ,--.-.)\r\n \\     /  o \\o\\\r\n /\\/\\  \\    /_/\r\n  (_.   `--'__)\r\n   |     .-'  \\\r\n   |  .-'.     )\r\n   | (  _/--.-'\r\n   |  `.___.'\r\n         (");
+                Console.ResetColor();
+                Console.Write($"\n -Press the any-key!!");
+            }
+
+            Console.ReadKey(true); // Clear the key that was pressed to exit the loop
+            Console.CursorVisible = true;
+            //Console.Clear();
+            //Console.WriteLine(@"   ________");
+            //Console.WriteLine(@"  /\  *  * \");
+            //Console.WriteLine(@" /  \   *   \");
+            //Console.WriteLine(@"/    \_______\");
+            //Console.WriteLine(@"\ *  /       /");
+            //Console.WriteLine(@" \  /  * *  /");
+            //Console.WriteLine(@"  \/_______/");
+            //Console.WriteLine("\n");
+            //Typewriter.Text(@"Terning triller");
+            //Thread.Sleep(500);
+            //Console.Write(".");
+            //Thread.Sleep(500);
+            //Console.Write(".");
+            //Thread.Sleep(500);
+            //Console.Write(".");
+            //Console.WriteLine("\n");
+            Thread.Sleep(2000);
+            Console.Clear();
 
             Console.WriteLine(@"   ________");
             Console.WriteLine(@"  /\       \");
@@ -135,71 +237,131 @@ namespace HemmeligProsjekt
             Console.WriteLine("\n");
             Typewriter.Text("Ingen premie vunnet");
             Thread.Sleep(4000);
-            Console.Clear();
+            //Console.Clear();
+
+            string[] squidwardTentacles = new[]
+            {
+            @"        .--'''''''''--.",
+            @"     .'      .---.      '.",
+            @"    /    .-----------.    \",
+            @"   /        .-----.        \",
+            @"   |       .-.   .-.       |",
+            @"   |      /   \ /   \      |",
+            @"    \    | .-. | .-. |    /",
+            @"     '-._| | | | | | |_.-'",
+            @"         | '-' | '-' |",
+            @"          \___/ \___/",
+            @"       _.-'  /   \  `-._",
+            @"     .' _.--|     |--._ '.",
+            @"     ' _...-|     |-..._ '",
+            @"            |     |",
+            @"            '.___.'",
+            @"              | |",
+            @"             _| |_",
+            @"            /\( )/\",
+            @"           /  ` '  \",
+            @"          | |     | |",
+            @"          '-'     '-'",
+            @"          | |     | |",
+            @"          | |     | |",
+            @"          | |-----| |",
+            @"       .`/  |     | |/`.",
+            @"       |    |     |    |",
+            @"       '._.'| .-. |'._.'",
+            @"             \ | /",
+            @"             | | |",
+            @"             | | |",
+            @"             | | |",
+            @"            /| | |\",
+            @"          .'_| | |_`.",
+            @"          `. | | | .'",
+            @"       .    /  |  \    .",
+            @"      /o`.-'  / \  `-.`o\",
+            @"     /o  o\ .'   `. /o  o\",
+            @"     `.___.'       `.___.'",
+        };
 
 
+            int startX = (Console.WindowWidth - squidwardTentacles[0].Length) / 2;
+            int startY = (Console.WindowHeight - squidwardTentacles.Length) / 2;
+            //string[] colors = new[] { "Yellow", "DarkYellow", "Magenta", "DarkMagenta","Cyan", "DarkCyan" };
+            int j = 0;
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine(@"        .--'''''''''--.");
-            Console.WriteLine(@"     .'      .---.      '.");
-            Thread.Sleep(100);
-            Console.WriteLine(@"    /    .-----------.    \");
-            Console.WriteLine(@"   /        .-----.        \");
-            Thread.Sleep(100);
-            Console.WriteLine(@"   |       .-.   .-.       |");
-            Console.WriteLine(@"   |      /   \ /   \      |");
-            Thread.Sleep(100);
-            Console.WriteLine(@"    \    | .-. | .-. |    /");
-            Console.WriteLine(@"     '-._| | | | | | |_.-'");
-            Thread.Sleep(100);
-            Console.WriteLine(@"         | '-' | '-' |");
-            Console.WriteLine(@"          \___/ \___/");
-            Thread.Sleep(100);
-            Console.WriteLine(@"       _.-'  /   \  `-._");
-            Console.WriteLine(@"     .' _.--|     |--._ '.");
-            Thread.Sleep(100);
-            Console.WriteLine(@"     ' _...-|     |-..._ '");
-            Console.WriteLine(@"            |     |");
-            Thread.Sleep(100);
-            Console.WriteLine(@"            '.___.'");
-            Console.WriteLine(@"              | |");
-            Thread.Sleep(100);
-            Console.WriteLine(@"             _| |_");
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(@"            /\( )/\");
-            Thread.Sleep(100);
-            Console.WriteLine(@"           /  ` '  \");
-            Console.WriteLine(@"          | |     | |");
-            Thread.Sleep(100);            
-            Console.WriteLine(@"          '-'     '-'");
-            Console.WriteLine(@"          | |     | |");
-            Thread.Sleep(100);
-            Console.WriteLine(@"          | |     | |");
-            Console.WriteLine(@"          | |-----| |");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Thread.Sleep(100);
-            Console.WriteLine(@"       .`/  |     | |/`.");
-            Console.WriteLine(@"       |    |     |    |");
-            Thread.Sleep(100);
-            Console.WriteLine(@"       '._.'| .-. |'._.'");
-            Console.WriteLine(@"             \ | /");
-            Thread.Sleep(100);
-            Console.WriteLine(@"             | | |");
-            Console.WriteLine(@"             | | |");
-            Thread.Sleep(100);
-            Console.WriteLine(@"             | | |");
-            Console.WriteLine(@"            /| | |\");
-            Thread.Sleep(100);
-            Console.WriteLine(@"          .'_| | |_`.");
-            Console.WriteLine(@"          `. | | | .'");
-            Thread.Sleep(100);
-            Console.WriteLine(@"       .    /  |  \    .");
-            Console.WriteLine(@"      /o`.-'  / \  `-.`o\");
-            Thread.Sleep(100);
-            Console.WriteLine(@"     /o  o\ .'   `. /o  o\");
-            Console.WriteLine(@"     `.___.'       `.___.'");
-            Thread.Sleep(2000);
+            foreach (string item in squidwardTentacles)
+            {
+                if (j == 18) Console.ForegroundColor = ConsoleColor.Red;
+                if (j == 24) Console.ForegroundColor = ConsoleColor.Cyan;
+
+                Console.SetCursorPosition(startX, startY + j);
+                Console.WriteLine(item);
+                j++;
+
+            }
             Console.ResetColor();
-            Console.Clear();
+
+
+            //Console.ForegroundColor = ConsoleColor.Cyan;
+            //Console.WriteLine(@"        .--'''''''''--.");
+            //Console.WriteLine(@"     .'      .---.      '.");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"    /    .-----------.    \");
+            //Console.WriteLine(@"   /        .-----.        \");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"   |       .-.   .-.       |");
+            //Console.WriteLine(@"   |      /   \ /   \      |");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"    \    | .-. | .-. |    /");
+            //Console.WriteLine(@"     '-._| | | | | | |_.-'");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"         | '-' | '-' |");
+            //Console.WriteLine(@"          \___/ \___/");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"       _.-'  /   \  `-._");
+            //Console.WriteLine(@"     .' _.--|     |--._ '.");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"     ' _...-|     |-..._ '");
+            //Console.WriteLine(@"            |     |");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"            '.___.'");
+            //Console.WriteLine(@"              | |");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"             _| |_");
+            //Console.ForegroundColor = ConsoleColor.Red;
+            //Console.WriteLine(@"            /\( )/\");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"           /  ` '  \");
+            //Console.WriteLine(@"          | |     | |");
+            //Thread.Sleep(100);            
+            //Console.WriteLine(@"          '-'     '-'");
+            //Console.WriteLine(@"          | |     | |");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"          | |     | |");
+            //Console.WriteLine(@"          | |-----| |");
+            //Console.ForegroundColor = ConsoleColor.Cyan;
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"       .`/  |     | |/`.");
+            //Console.WriteLine(@"       |    |     |    |");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"       '._.'| .-. |'._.'");
+            //Console.WriteLine(@"             \ | /");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"             | | |");
+            //Console.WriteLine(@"             | | |");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"             | | |");
+            //Console.WriteLine(@"            /| | |\");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"          .'_| | |_`.");
+            //Console.WriteLine(@"          `. | | | .'");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"       .    /  |  \    .");
+            //Console.WriteLine(@"      /o`.-'  / \  `-.`o\");
+            //Thread.Sleep(100);
+            //Console.WriteLine(@"     /o  o\ .'   `. /o  o\");
+            //Console.WriteLine(@"     `.___.'       `.___.'");
+            //Thread.Sleep(2000);
+            //Console.ResetColor();
+            //Console.Clear();
         }
 
         public static void PrintConsolationPrize()
@@ -325,7 +487,8 @@ namespace HemmeligProsjekt
         }
 
         public static void PrintBirthdayCake()
-        {
+        {         
+            // Putting the cake in an array, for easier centering...
             string[] cake = new[] {
                 @"                0   0                ",
                 @"                |   |                ",
@@ -344,6 +507,7 @@ namespace HemmeligProsjekt
                 @"|___________________________________|"
             };
 
+            // Finding Nemo, i.e. center of console screen
             int startX = (Console.WindowWidth - cake[0].Length) / 2;
             int startY = (Console.WindowHeight - cake.Length) / 2;
             //string[] colors = new[] { "Yellow", "DarkYellow", "Magenta", "DarkMagenta","Cyan", "DarkCyan" };
@@ -365,9 +529,11 @@ namespace HemmeligProsjekt
                 Console.WriteLine(item);
                 i++;
             }
-            // "obfuscate" the default console end-of-program-text and hide the cursor.
+            // "hide" the default console end-of-program-text and hide the cursor.
             Console.ForegroundColor = ConsoleColor.Black;
             Console.CursorVisible = false;
+
+            //START: Original cake
             //Console.Clear();
             //Console.WriteLine(@"                0   0                ");
             //Console.WriteLine(@"                |   |                ");
@@ -391,6 +557,7 @@ namespace HemmeligProsjekt
             //Console.WriteLine(@"| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |");
             //Console.WriteLine(@"|___________________________________|");
             //Console.ResetColor();
+            //END: Original cake
         }
     }
 }
