@@ -207,8 +207,8 @@ namespace HemmeligProsjekt
             Typewriter.Text("Som takk for deltagelse får du en trøstepremie");
             Console.WriteLine("\n");
             Thread.Sleep(1100);
-            Typewriter.Text("Du får den utlevert etter at spillet er ferdig");
-            Thread.Sleep(3200);
+            Typewriter.Text("Chief Rubberduck HUUB");
+            Console.ReadLine();
         }
 
         public static void PrintWelcomeMessagePart2()
